@@ -1,0 +1,45 @@
+.items {
+  padding: 72px 0;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+
+  .view {
+    & > span {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 8px;
+    }
+    & > button {
+      margin-right: 8px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin-bottom: 20px;
+  margin-right: 0;
+}

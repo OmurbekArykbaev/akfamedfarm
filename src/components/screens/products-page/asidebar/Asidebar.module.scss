@@ -1,0 +1,45 @@
+.aside {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  min-width: 310px;
+  margin-right: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.title {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: #212526;
+  border-bottom: 1px solid #3b3b3b;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: #f05a00;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  & > span {
+  }
+
+  & > img {
+  }
+}

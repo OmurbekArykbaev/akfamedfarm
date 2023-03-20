@@ -1,0 +1,40 @@
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 150px;
+}
+
+.time {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 120px;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #fc573b;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  margin-right: 160px;
+}

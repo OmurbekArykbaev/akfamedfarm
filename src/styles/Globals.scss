@@ -1,0 +1,51 @@
+$white: #ffffff;
+$light-gray: #f2f5f7;
+$black: #000;
+
+$gray: #dedbdb;
+$light-dark: #8a8a8a;
+$dark: #3b3b3b;
+$dark2: #212526;
+
+$orange: #f05a00;
+$orange2: #fc573b;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: 16px;
+  color: $black;
+  background-color: #f2f5f7;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

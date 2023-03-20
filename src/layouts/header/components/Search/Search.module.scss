@@ -1,0 +1,26 @@
+.form {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-left: 24px;
+    margin-right: 17px;
+  }
+
+  input {
+    width: 70%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 0;
+
+    outline: none;
+    border: none;
+  }
+}

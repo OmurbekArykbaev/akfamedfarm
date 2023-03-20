@@ -1,0 +1,16 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  & > span + span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
