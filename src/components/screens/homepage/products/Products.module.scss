@@ -27,10 +27,11 @@
 }
 
 .items {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
 
-  padding: 70px 0;
+  padding: 70px;
   background-color: #01a4a5;
 }

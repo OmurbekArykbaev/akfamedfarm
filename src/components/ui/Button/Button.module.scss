@@ -1,0 +1,24 @@
+.custom {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  border: 1px solid #f05a00 !important;
+  border-radius: 5px;
+  background-color: #f05a00 !important;
+
+  transition: all 0.4s;
+
+  &:active {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

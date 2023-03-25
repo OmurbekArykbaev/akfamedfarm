@@ -10,7 +10,7 @@ import RowSVG from "/public/img/catalog/row.svg"
 import Image from "next/image"
 import { Card } from "@/components/ui"
 
-const Items = () => {
+const Items = ({ items }: { items: any }) => {
   return (
     <section className={styles.items}>
       <Container className={styles.wrapper}>
@@ -29,9 +29,12 @@ const Items = () => {
             </div>
           </div>
           <div className={styles.products}>
+            {items.map((i: any) => (
+              <Card key={i.id} {...i} />
+            ))}
+            {/* <Card className={styles.card} />
             <Card className={styles.card} />
-            <Card className={styles.card} />
-            <Card className={styles.card} />
+            <Card className={styles.card} /> */}
           </div>
         </div>
       </Container>

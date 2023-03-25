@@ -4,19 +4,23 @@ import React, { useState } from "react"
 import styles from "./ProductType.module.scss"
 import { ProductType } from "./ProductType.props"
 import { IoTriangleSharp } from "react-icons/io5"
+import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks"
+import { switchTypeProducts } from "../slice/productSlice"
 
-const ProductType = ({ title, description, img }: ProductType) => {
-  const [isShow, setIsShow] = useState<boolean>(false)
+const ProductType = ({ title, description, img, category }: ProductType) => {
+  const state = useAppSelector((state) => state.switchProducts.category)
+  const dispatch = useAppDispatch()
+
   return (
     <div
-      onMouseEnter={() => setIsShow(true)}
-      onMouseLeave={() => setIsShow(false)}
+      onMouseEnter={() => dispatch(switchTypeProducts(category))}
       className={styles.item}
     >
       <Image className={styles.img} src={img} alt="Image" />
+
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.desc}>{description}</p>
-      {isShow && <IoTriangleSharp className={styles.triangle} />}
+      {state === category && <IoTriangleSharp className={styles.triangle} />}
     </div>
   )
 }

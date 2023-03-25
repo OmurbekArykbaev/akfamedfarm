@@ -2,6 +2,7 @@ import { Inter } from "next/font/google"
 
 import { CustomCarousel, Products } from "@/components/screens"
 import { Layout } from "@/layouts"
+import { data } from "../data"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -10,7 +11,7 @@ export default function Home() {
     <>
       <Layout title="Главная" description="Сайт для Медфарм">
         <CustomCarousel />
-        <Products />
+        <Products product={data} />
       </Layout>
     </>
   )
