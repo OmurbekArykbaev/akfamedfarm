@@ -19,7 +19,9 @@ const Products: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 export const getStaticProps: GetStaticProps<{
   products: Product[]
 }> = async () => {
-  const res = await fetch("http://localhost:3000/api/products")
+  const res = await fetch(
+    "https://mocki.io/v1/79fa3c3f-0d58-4be9-8bed-3a0a33ebc4be"
+  )
   const products: Product[] = await res.json()
 
   if (!products) {

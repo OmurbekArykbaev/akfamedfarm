@@ -2,7 +2,7 @@ import { Product } from "@/types/Products"
 
 export const data: Product[] = [
   {
-    id: 0,
+    id: 1,
     name: "Монитор модульный",
     image: "/img/products/product1.jpg",
     description:
@@ -10,7 +10,7 @@ export const data: Product[] = [
     category: "microwave",
   },
   {
-    id: 1,
+    id: 2,
     name: "Аппарат модульный",
     image: "/img/products/product2.jpg",
     category: "laser",

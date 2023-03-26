@@ -25,11 +25,13 @@ const ProductDetail: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:3000/api/products")
+  const res = await fetch(
+    "https://mocki.io/v1/79fa3c3f-0d58-4be9-8bed-3a0a33ebc4be"
+  )
   const products = await res.json()
 
   const paths = products.map((product: Product) => ({
-    params: { id: product.id.toString() },
+    params: { id: String(product.id) },
   }))
 
   return { paths, fallback: false }
@@ -38,7 +40,9 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps<{ data: Product }> = async (
   context
 ) => {
-  const res = await fetch("http://localhost:3000/api/products")
+  const res = await fetch(
+    "https://mocki.io/v1/79fa3c3f-0d58-4be9-8bed-3a0a33ebc4be"
+  )
   const products: Product[] = await res.json()
   const data = products.find((i) => i.id.toString() === context.params?.id)
 
