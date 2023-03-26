@@ -1,7 +1,7 @@
 import Image from "next/image"
 import React from "react"
 
-import BannerSVG from "/public/img/banner-waves.svg"
+import BannerJpeg from "/public/img/banner/products.jpg"
 import styles from "./Banner.module.scss"
 import { Container } from "@/layouts"
 

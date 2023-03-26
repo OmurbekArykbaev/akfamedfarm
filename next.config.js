@@ -6,9 +6,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "localhost",
-        port: ":3000",
-        pathname: "/img/products/",
+        hostname: "ecomicrowave.com",
+        port: "",
+        pathname: "/App/images/",
       },
     ],
   },
