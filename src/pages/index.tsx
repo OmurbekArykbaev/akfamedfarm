@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 
 import { CustomCarousel, Products } from "@/components/screens"
 import { Layout } from "@/layouts"
-import { data } from "../data"
+import { data } from "../const/data"
 
 const inter = Inter({ subsets: ["latin"] })
 

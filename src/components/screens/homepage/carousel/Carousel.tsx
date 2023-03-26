@@ -10,8 +10,9 @@ const CustomCarousel = () => {
     <Carousel
       autoPlay
       infiniteLoop={true}
-      interval={2000}
+      interval={3000}
       transitionTime={2000}
+      showThumbs={false}
     >
       {data.map((item) => (
         <Item key={item.id} src={item.image} alt={item.alt} />

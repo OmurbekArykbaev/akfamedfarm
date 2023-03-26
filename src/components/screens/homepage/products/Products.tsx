@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui"
 import { useAppSelector } from "@/hooks/reduxHooks"
 import Container from "@/layouts/container/Container"
-import { data } from "@/data"
+import { data } from "@/const/data"
 import React, { FC } from "react"
 import styles from "./Products.module.scss"
 import { ProductProps } from "./Products.props"
@@ -20,20 +20,17 @@ const Products: FC<ProductProps> = () => {
             <ProductType
               title="Microwave"
               description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum"
-              img={HeartSVG}
-              category="micro"
+              category="microwave"
             />
             <ProductType
-              title="ASP"
+              title="High-frequency"
               description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum"
-              img={HeartSVG}
-              category="asp"
+              category="high-frequency"
             />
             <ProductType
-              title="PSA"
+              title="Laser"
               description="Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum  lorem ipsum"
-              img={HeartSVG}
-              category="psa"
+              category="laser"
             />
           </div>
         </div>
@@ -41,7 +38,14 @@ const Products: FC<ProductProps> = () => {
           {data
             .filter((i) => i.category === category)
             .map((i) => (
-              <Card key={i.id} title={i.name} category={i.category} />
+              <Card
+                id={i.id}
+                description={i.description}
+                key={i.id}
+                name={i.name}
+                image={i.image}
+                category={i.category}
+              />
             ))}
         </div>
       </Container>

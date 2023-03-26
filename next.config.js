@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["a-yazdorov.ru"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: ":3000",
+        pathname: "/img/products/",
+      },
+    ],
   },
 }
-
-module.exports = nextConfig
 // sassOptions: {
 //   includePaths: [path.join(__dirname, "styles")],
 //   prependData: `@import "./Variables.scss";`,

@@ -1,13 +1,6 @@
-import { Category } from "@/components/screens/homepage/products/slice/productSlice"
-import { AnchorHTMLAttributes, DetailedHTMLProps } from "react"
+import { Category, Product } from "@/types/Products"
+import { AnchorHTMLAttributes, DetailedHTMLProps, HTMLProps } from "react"
 
-export interface CardProps
-  extends DetailedHTMLProps<
-    AnchorHTMLAttributes<HTMLAnchorElement>,
-    HTMLAnchorElement
-  > {
-  link?: string
-  title?: string
-  category?: Category
-  img?: string
+export interface CardProps extends Product {
+  className?: string
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa"
 
 import Container from "@/layouts/container/Container"
 import CatalogBtn from "./components/Catalog"
@@ -10,7 +11,6 @@ import Search from "./components/Search"
 import styles from "./style.module.scss"
 
 import InstagramSVG from "/public/img/instagram.svg"
-import VkSVG from "/public/img/vk.svg"
 
 const Header = () => {
   return (
@@ -26,24 +26,24 @@ const Header = () => {
           <CatalogBtn />
           <ul className={styles.links}>
             <li>
-              <Link href="/">О компании</Link>
+              <Link href="/about">О компании</Link>
             </li>
             <li>
-              <Link href="/">Акции</Link>
-            </li>
-            <li>
-              <Link href="/">Хиты сезона</Link>
-            </li>
-            <li>
-              <Link href="/">Новинки</Link>
+              <Link href="/contacts">Контакты</Link>
             </li>
           </ul>
           <div className={styles.social}>
-            <a href="#" className={styles.link}>
+            <a
+              href="https://www.instagram.com/akfamedfarm/"
+              className={styles.link}
+            >
               <Image src={InstagramSVG} alt="instagram" />
             </a>
-            <a href="#" className={styles.link}>
-              <Image src={VkSVG} alt="Vkontakte" />
+            <a
+              href="https://api.whatsapp.com/send/?phone=996502515115&text&type=phone_number&app_absent=0"
+              className={styles.link}
+            >
+              <FaWhatsapp size={22} />
             </a>
           </div>
           <Search />

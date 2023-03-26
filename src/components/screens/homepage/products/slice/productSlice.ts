@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit"
-
-export type Category = "micro" | "asp" | "psa"
+import { Category } from "@/types/Products"
 
 const initialState: initialState = {
   isActive: false,
-  category: "asp",
+  category: "laser",
 }
 
 interface initialState {

@@ -1,9 +1,9 @@
+import { Category } from "@/types/Products"
 import { StaticImageData } from "next/image"
-import { Category } from "../slice/productSlice"
 
 export interface ProductType {
   title: string
   description: string
-  img: string | StaticImageData
+  img?: string | StaticImageData
   category: Category
 }

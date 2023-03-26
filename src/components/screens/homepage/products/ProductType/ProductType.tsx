@@ -16,7 +16,7 @@ const ProductType = ({ title, description, img, category }: ProductType) => {
       onMouseEnter={() => dispatch(switchTypeProducts(category))}
       className={styles.item}
     >
-      <Image className={styles.img} src={img} alt="Image" />
+      {img && <Image className={styles.img} src={img} alt="Image" />}
 
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.desc}>{description}</p>

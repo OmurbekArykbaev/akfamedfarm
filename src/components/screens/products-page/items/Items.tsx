@@ -1,5 +1,5 @@
 import { Container } from "@/layouts"
-import React from "react"
+import React, { FC } from "react"
 import Asidebar from "../asidebar/Asidebar"
 
 import styles from "./Item.module.scss"
@@ -10,7 +10,9 @@ import RowSVG from "/public/img/catalog/row.svg"
 import Image from "next/image"
 import { Card } from "@/components/ui"
 
-const Items = ({ items }: { items: any }) => {
+import { Product } from "@/types/Products"
+
+const Items = ({ items }: { items: Product[] }) => {
   return (
     <section className={styles.items}>
       <Container className={styles.wrapper}>
@@ -32,9 +34,6 @@ const Items = ({ items }: { items: any }) => {
             {items.map((i: any) => (
               <Card key={i.id} {...i} />
             ))}
-            {/* <Card className={styles.card} />
-            <Card className={styles.card} />
-            <Card className={styles.card} /> */}
           </div>
         </div>
       </Container>
